@@ -1,3 +1,4 @@
+name: Publish image to Docker Hub
 on:
   [workflow_dispatch]
 
@@ -21,4 +22,5 @@ jobs:
     - name: Build the Docker image
       run: |
           docker build . -t ghcr.io/$(echo ${{github.actor}} | tr '[:upper:]' '[:lower:]')/interstellar-docker;
-          docker push ghcr.io/$(echo ${{github.actor}} | tr '[:upper:]' '[:lower:]')/interstellar-docker;```
+          docker push ghcr.io/$(echo ${{github.actor}} | tr '[:upper:]' '[:lower:]')/interstellar-docker;
+```
